@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 
 import { formatLargeNumber } from "@/app/utils/format-large-number";
-import fetchSolPrice from "@/app/utils/fetch-sol-price";
+import fetchSolPrice from "@/app/utils/fetch-crypto-price";
 import TradingInput from "./TradingInput";
 import defaultFees from "@/app/config/default-fees.json";
 import Checkbox from "./Checkbox";
@@ -103,7 +103,7 @@ const MarketCapProfits = () => {
 	};
 
 	return (
-		<div className="h-full w-full max-w-lg bg-gray-800 text-gray-200 shadow-xl rounded-lg p-8">
+		<div className="h-full w-full max-w-lg bg-darkBlue bg-opacity-75 text-gray-200 shadow-xl rounded-lg p-8">
 			<h1 className="text-3xl font-bold text-neonGreen mb-4">Profit Calculator</h1>
 			<p className="text-gray-400 mb-6">
 				Enter the market caps and fees to calculate your profits and percent profit.
