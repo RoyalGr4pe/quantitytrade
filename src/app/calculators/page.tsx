@@ -8,6 +8,19 @@ import MarketCapProfits from './components/MarketCapProfits';
 export const metadata: Metadata = {
 	title: "Quantity Trade - Calculators",
 	description: "Trading Fast and Smart - Tools designed to maximize profits and minimize loses.",
+	openGraph: {
+		title: "Quantity Trade - Calculators",
+		description: "Trading Fast and Smart - Tools designed to maximize profits and minimize losses.",
+		url: "https://quantitytrade.vercel.app",
+		siteName: "Quantity Trade",
+		images: [
+			{
+				url: "https://i.imgur.com/7wb9vjk.png",
+				width: 1200,
+				height: 630,
+			},
+		],
+	},
 };
 
 const page = () => {

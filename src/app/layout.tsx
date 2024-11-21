@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
+import Head from "next/head";
 
 import localFont from "next/font/local";
 import "./globals.css";
@@ -18,6 +19,19 @@ const geistMono = localFont({
 export const metadata: Metadata = {
 	title: "Quantity Trade",
 	description: "Trading Fast and Smart - Tools designed to maximize profits and minimize losses.",
+	openGraph: {
+		title: "Quantity Trade",
+		description: "Trading Fast and Smart - Tools designed to maximize profits and minimize losses.",
+		url: "https://quantitytrade.vercel.app",
+		siteName: "Quantity Trade",
+		images: [
+			{
+				url: "https://i.imgur.com/Lm7Vy0d.png",
+				width: 1200,
+				height: 630,
+			},
+		],
+	},
 };
 
 export default function RootLayout({
@@ -27,11 +41,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<head>
+			<Head>
 				{/* Google AdSense Script */}
-				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6066589868368367"
-					crossOrigin="anonymous"></script>
-			</head>
+				<meta name="google-adsense-account" content="ca-pub-6066589868368367" />
+			</Head>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 				style={{
