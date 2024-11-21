@@ -40,7 +40,7 @@ const Dropdown: React.FC<DropdownProps> = ({ options, value, onChange }) => {
 			<div className='h-full z-10'>
 				<button
 					type="button"
-					className="inline-flex justify-between items-center w-30 h-14 rounded-full bg-darkBlue border border-neonGreen text-white px-4 py-2 text-lg font-medium"
+					className="inline-flex justify-between items-center w-30 h-14 rounded-full bg-darkBlue border-2 border-neonGreen text-white px-4 py-2 text-lg font-medium transition duration-200 ease-in-out focus:ring-2 focus:ring-neonGreen focus:outline-none focus:border-neonGreen focus:bg-opacity-50 focus:border-transparent"
 					onClick={toggleDropdown}
 				>
 					{/* Display the full name corresponding to the selected value */}
@@ -73,8 +73,8 @@ const Dropdown: React.FC<DropdownProps> = ({ options, value, onChange }) => {
 								onClick={() => handleOptionClick(option.param.toLowerCase())}
 							>
 								<div className='flex flex-col'>
-									<span>{option.label}</span>
-									<span>{option.sub_label}</span>
+									<span className='font-semibold text-[15px]'>{option.label}</span>
+									<span className='text-gray-300'>{option.sub_label}</span>
 								</div>
 							</a>
 						))}

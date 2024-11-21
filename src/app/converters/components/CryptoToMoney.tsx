@@ -72,7 +72,7 @@ const CryptoToMoney = () => {
 	};
 
 	return (
-		<div className="p-4 rounded-lg shadow-md bg-darkBlue w-max-xl">
+		<div className="p-4 rounded-lg shadow-md bg-darkBlue bg-opacity-75 w-max-xl">
 			<h1 className="text-xl font-semibold mb-4 text-neonGreen">Crypto Conversion</h1>
 
 			<div className="flex lg:flex-row flex-col items-center justify-between gap-4">

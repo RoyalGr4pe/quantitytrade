@@ -10,7 +10,7 @@ interface TradingInputProps {
 
 const TradingInput: React.FC<TradingInputProps> = ({ name, label, placeHolder, value, onChange }) => {
 	const inputClass =
-		"w-full px-4 py-2 text-base bg-darkBlue text-gray-200 placeholder-gray-400 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-neonGreen focus:border-transparent transition duration-300";
+		"w-full px-4 py-2 text-base bg-darkBlue text-gray-200 placeholder-gray-400 border border-gray-600 rounded-lg focus:outline-none bg-opacity-75 focus:bg-opacity-50 focus:ring-2 focus:ring-neonGreen focus:border-transparent transition duration-300";
 
 	return (
 		<div>
