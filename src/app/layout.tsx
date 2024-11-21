@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import Head from "next/head";
+import Script from "next/script";
 
 import localFont from "next/font/local";
 import "./globals.css";
@@ -32,6 +33,19 @@ export const metadata: Metadata = {
 			},
 		],
 	},
+	robots: {
+		index: true,
+		follow: true,
+		nocache: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			noimageindex: true,
+			'max-video-preview': -1,
+			'max-image-preview': 'large',
+			'max-snippet': -1,
+		},
+	},
 };
 
 export default function RootLayout({
@@ -41,10 +55,15 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<Head>
+			<head>
 				{/* Google AdSense Script */}
-				<meta name="google-adsense-account" content="ca-pub-6066589868368367" />
-			</Head>
+				<Script
+					async
+					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6066589868368367"
+					crossOrigin="anonymous"
+					strategy="lazyOnload"
+				/>
+			</head>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 				style={{

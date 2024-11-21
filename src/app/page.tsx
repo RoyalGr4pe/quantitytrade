@@ -1,4 +1,36 @@
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Quantity Trade",
+	description: "Trading Fast and Smart - Tools designed to maximize profits and minimize losses.",
+	openGraph: {
+		title: "Quantity Trade",
+		description: "Trading Fast and Smart - Tools designed to maximize profits and minimize losses.",
+		url: "https://quantitytrade.vercel.app",
+		siteName: "Quantity Trade",
+		images: [
+			{
+				url: "https://i.imgur.com/Lm7Vy0d.png",
+				width: 1200,
+				height: 630,
+			},
+		],
+	},
+	robots: {
+		index: true,
+		follow: true,
+		nocache: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			noimageindex: true,
+			'max-video-preview': -1,
+			'max-image-preview': 'large',
+			'max-snippet': -1,
+		},
+	},
+};
 
 export default function Home() {
 	return (

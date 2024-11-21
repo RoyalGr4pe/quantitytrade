@@ -21,28 +21,41 @@ export const metadata: Metadata = {
 			},
 		],
 	},
+	robots: {
+		index: true,
+		follow: true,
+		nocache: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			noimageindex: true,
+			'max-video-preview': -1,
+			'max-image-preview': 'large',
+			'max-snippet': -1,
+		},
+	},
 };
 
 const page = () => {
-  return (
-    <div className="h-full flex justify-center items-center px-4 py-16 overflow-y-auto">
-      {/* The calculators */}
-	  <div className='flex lg:flex-row flex-col gap-4'>
-		<MarketCapToBreak />
-		<MarketCapProfits />
-	  </div>
+	return (
+		<div className="h-full flex justify-center items-center px-4 py-16 overflow-y-auto">
+			{/* The calculators */}
+			<div className='flex lg:flex-row flex-col gap-4'>
+				<MarketCapToBreak />
+				<MarketCapProfits />
+			</div>
 
-      {/* Link back to the root */}
-      <div className="absolute top-4 left-4">
-        <Link
-          href="/"
-          className="text-black bg-neonGreen px-4 py-2 rounded-md hover:bg-green-400 transition duration-300"
-        >
-          Back to Home
-        </Link>
-      </div>
-    </div>
-  );
+			{/* Link back to the root */}
+			<div className="absolute top-4 left-4">
+				<Link
+					href="/"
+					className="text-black bg-neonGreen px-4 py-2 rounded-md hover:bg-green-400 transition duration-300"
+				>
+					Back to Home
+				</Link>
+			</div>
+		</div>
+	);
 };
 
 export default page;
