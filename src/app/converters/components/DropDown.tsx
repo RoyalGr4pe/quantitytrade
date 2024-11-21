@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 interface DropdownProps {
-	label: string;
 	options: { label: string, param: string, sub_label: string }[]; // Change: Use param and label
 	value: string;
 	onChange: (value: string) => void;
 }
 
-const Dropdown: React.FC<DropdownProps> = ({ label, options, value, onChange }) => {
+const Dropdown: React.FC<DropdownProps> = ({ options, value, onChange }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const dropdownRef = useRef<HTMLDivElement | null>(null);
 

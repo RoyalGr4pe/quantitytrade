@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 
 import MarketCapToBreak from './components/MarketCapToBreak';
 import MarketCapProfits from './components/MarketCapProfits';
