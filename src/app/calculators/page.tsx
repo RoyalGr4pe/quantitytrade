@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 		siteName: "Quantity Trade",
 		images: [
 			{
-				url: "https://i.imgur.com/7wb9vjk.png",
+				url: "https://i.imgur.com/4l3DPKe.png",
 				width: 1200,
 				height: 630,
 			},
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 
 const page = () => {
 	return (
-		<div className="h-full flex justify-center items-center px-4 py-16 overflow-y-auto">
+		<div className="min-h-screen flex justify-center items-center px-4 py-16 overflow-y-auto">
 			{/* The calculators */}
 			<div className='flex lg:flex-row flex-col gap-4'>
 				<MarketCapToBreak />
