@@ -37,7 +37,7 @@ const Dropdown: React.FC<DropdownProps> = ({ options, value, onChange }) => {
 
 	return (
 		<div ref={dropdownRef} className="relative inline-block text-left h-full">
-			<div className='h-full'>
+			<div className='h-full z-10'>
 				<button
 					type="button"
 					className="inline-flex justify-between items-center w-30 h-14 rounded-full bg-darkBlue border border-neonGreen text-white px-4 py-2 text-lg font-medium"
@@ -62,7 +62,7 @@ const Dropdown: React.FC<DropdownProps> = ({ options, value, onChange }) => {
 			</div>
 
 			{isOpen && (
-				<div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-darkBlue ring-1 ring-black ring-opacity-5 focus:outline-none">
+				<div className="z-20 origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-darkBlue ring-1 ring-black ring-opacity-5 focus:outline-none">
 					<div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
 						{/* Show both label and param */}
 						{options.map((option) => (
