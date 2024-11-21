@@ -6,11 +6,11 @@ import PageLayout from '../components/PageLayout';
 
 export const metadata: Metadata = {
 	title: "Quantity Trade - Calculators",
-	description: "Trading Fast and Smart - Tools designed to maximize profits and minimize loses.",
+	description: "Maximize your trading potential with Quantity Trade's powerful calculator tools. Our calculators are designed to help you make smarter, more informed decisions by quickly calculating key metrics such as market cap break-even points and potential profits. Whether you're an experienced trader or just starting out, these tools are perfect for anyone looking to optimize their strategies and minimize risk. Start calculating today and trade with confidence!",
 	openGraph: {
 		title: "Quantity Trade - Calculators",
 		description: "Trading Fast and Smart - Tools designed to maximize profits and minimize losses.",
-		url: "https://quantitytrade.vercel.app",
+		url: "https://quantitytrade.vercel.app/calculators",
 		siteName: "Quantity Trade",
 		images: [
 			{
