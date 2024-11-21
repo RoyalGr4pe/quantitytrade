@@ -7,7 +7,6 @@ import NumberInput from './NumberInput';
 
 const CryptoToMoney = () => {
 	const [price, setPrice] = useState<number | null>(null);
-	const [loading, setLoading] = useState<boolean>(false);
 	const [amountCrypto, setAmountCrypto] = useState<string>('1');
 	const [amountFiat, setAmountFiat] = useState<string>('1');
 
@@ -31,17 +30,16 @@ const CryptoToMoney = () => {
 		{ param: 'INR', sub_label: 'Indian Rupee' }
 	];
 
-	// Fetch the price from the API
-	const fetchPrice = async () => {
-		setLoading(true);
-		const fetchedPrice = await fetchCryptoPrice(crypto, currency);
-		setPrice(fetchedPrice);
-		setLoading(false);
-	};
 
 	// When either crypto or fiat amount changes, we calculate the other value
 	useEffect(() => {
-		fetchPrice();
+		// Fetch the price from the API
+		const fetchPrice = async () => {
+			const fetchedPrice = await fetchCryptoPrice(crypto, currency);
+			setPrice(fetchedPrice);
+		};
+
+		fetchPrice()
 	}, [crypto, currency]);
 
 	// Recalculate the fiat value when the price updates (but don't affect the crypto value)
@@ -88,7 +86,6 @@ const CryptoToMoney = () => {
 
 					{/* Cryptocurrency Dropdown */}
 					<DropDown
-						label="Cryptocurrency"
 						options={supportedCryptos.map(crypto => ({
 							label: `${crypto.ticker}`,
 							param: crypto.param,
@@ -109,7 +106,6 @@ const CryptoToMoney = () => {
 
 					{/* Currency Dropdown */}
 					<DropDown
-						label="Currency"
 						options={supportedCurrencies.map(currency => ({
 							label: `${currency.param}`,
 							param: currency.param,

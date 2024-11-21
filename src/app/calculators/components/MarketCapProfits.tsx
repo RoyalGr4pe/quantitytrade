@@ -27,7 +27,7 @@ const MarketCapProfits = () => {
 	// Fetch current SOL price when the component mounts
 	useEffect(() => {
 		const getSolPrice = async () => {
-			const price = await fetchSolPrice();
+			const price = await fetchSolPrice("solana", "usd");
 			if (price !== null) {
 				setSolPrice(price);
 			}
