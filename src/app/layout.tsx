@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
+import Head from 'next/head';
 
 import localFont from "next/font/local";
 import "./globals.css";
@@ -54,7 +55,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<head>
+			<Head>
 				{/* Google AdSense Script */}
 				<Script
 					async
@@ -62,7 +63,8 @@ export default function RootLayout({
 					crossOrigin="anonymous"
 					strategy="lazyOnload"
 				/>
-			</head>
+				<meta name="google-site-verification" content="fkeCyYpXzaSUhpjO1SF_6zF_NpxEiZNB2y6708pO78w" />
+			</Head>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 				style={{
