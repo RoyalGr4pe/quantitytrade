@@ -12,10 +12,12 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <div className="h-screen flex lg:flex-row flex-col justify-center items-center p-4 gap-4">
+    <div className="h-full flex justify-center items-center px-4 py-16 overflow-y-auto">
       {/* The calculators */}
-      <MarketCapToBreak />
-      <MarketCapProfits />
+	  <div className='flex lg:flex-row flex-col gap-4'>
+		<MarketCapToBreak />
+		<MarketCapProfits />
+	  </div>
 
       {/* Link back to the root */}
       <div className="absolute top-4 left-4">
